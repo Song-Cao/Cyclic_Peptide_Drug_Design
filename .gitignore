@@ -1,0 +1,26 @@
+# Byte-compiled/ DLL files
+__pycache__/
+*.pyo
+*.pyd
+
+# Log files
+*.log
+*.err
+lightning_logs/
+
+# Dataset and generated files
+data/
+*.sdf
+*.mol
+*.pdb
+*.fasta
+*.csv
+*.h5
+
+# Model training files
+checkpoints/
+*.pt
+
+# Temporary files
+*.tmp
+*.swp
