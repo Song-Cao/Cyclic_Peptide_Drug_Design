@@ -14,7 +14,7 @@ seaborn>=0.11.2
 tqdm>=4.62.3
 
 # Optional dependencies for GPU support
-cudatoolkit>=11.1  # Match your PyTorch installation
+cudatoolkit>=11.1  # Match PyTorch installation
 
 # Scheduling and optimization
 optuna>=2.10.0
