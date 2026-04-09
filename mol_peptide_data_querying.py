@@ -6,7 +6,7 @@ from Bio.SeqUtils import ProtParam
 from sklearn.preprocessing import StandardScaler
 import logging
 
-# Initialize logging
+# Initialize loggings
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 # Define constants
