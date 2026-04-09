@@ -13,7 +13,7 @@ class PeptideDataset(Dataset):
             protein_file (str): Path to the protein features CSV file.
             molecular_file (str): Path to the molecular features CSV file.
         """
-        self.protein_features = pd.read_csv(protein_file).iloc[:, 1:].values  # Exclude identifier column
+        self.protein_features = pd.read_csv(protein_file).iloc[:, 1:].values  # Exclude the identifier column
         self.molecular_features = pd.read_csv(molecular_file).iloc[:, 1:].values  # Exclude identifier column
 
         if len(self.protein_features) != len(self.molecular_features):
