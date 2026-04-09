@@ -85,7 +85,7 @@ def train_reinforcement_model(policy_net, reward_predictor, dataloader, optimize
         rewards = []
         optimizer.zero_grad()
 
-        # Simulate generation and reward collection
+        # Simulate generation and reward collections
         for peptides in dataloader:
             for peptide in peptides:
                 action_probs = policy_net(peptide)
