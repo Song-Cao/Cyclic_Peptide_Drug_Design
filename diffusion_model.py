@@ -50,7 +50,7 @@ class DiffusionModel(nn.Module):
         t_embed = self.time_embedding(t, x.size(-1))
         x = x + t_embed
 
-        # Forward pass with residual connection
+        # Forward pass with residual connections
         x = F.relu(self.bn1(self.fc1(x)))
         res = self.residual_fc(x)
         x = F.relu(self.bn2(self.fc2(x + res)))
