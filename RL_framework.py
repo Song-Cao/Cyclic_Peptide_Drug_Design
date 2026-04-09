@@ -17,7 +17,7 @@ class PeptideDataset(Dataset):
             file_path (str): Path to the CSV file containing peptide features.
         """
         self.data = pd.read_csv(file_path)
-        self.features = self.data.iloc[:, 1:].values  # Exclude identifier column
+        self.features = self.data.iloc[:, 1:].values  # Exclude the identifier column
 
     def __len__(self):
         return len(self.features)
