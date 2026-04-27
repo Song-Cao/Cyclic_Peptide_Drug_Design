@@ -16,8 +16,8 @@ class PeptideDataset(Dataset):
         self.protein_features = pd.read_csv(protein_file).iloc[:, 1:].values  # Exclude the identifier column
         self.molecular_features = pd.read_csv(molecular_file).iloc[:, 1:].values  # Exclude identifier column
 
-        if len(self.protein_features) != len(self.molecular_features):
-            raise ValueError("Protein and molecular features must have the same number of samples.")
+        if len(self.molecular_features) != len(self.protein_features):
+            raise ValueError("Protein and molecular features must have same number of samples.")
 
     def __len__(self):
         return len(self.protein_features)
