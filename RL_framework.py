@@ -101,7 +101,7 @@ def train_reinforcement_model(policy_net, reward_predictor, dataloader, optimize
         discounted_rewards = []
         cumulative_reward = 0
         for reward in reversed(rewards):
-            cumulative_reward = reward + gamma * cumulative_reward
+            cumulative_reward = reward + cumulative_reward * gamma
             discounted_rewards.insert(0, cumulative_reward)
 
         discounted_rewards = torch.tensor(discounted_rewards, dtype=torch.float32)
