@@ -1,11 +1,11 @@
 
-# Designing Orally Available Cyclic Peptide
+# Designing Orally Available Cyclic Peptides
 
 This repository implements a comprehensive pipeline for designing structurally diverse cyclic peptides with oral availability, utilizing advanced machine learning techniques including diffusion, contrastive learning, and reinforcement learning. The pipeline integrates molecular and protein data for the generation and optimization of cyclic peptide candidates with enhanced binding and pharmacokinetic properties.
 
 ## Features
 
-- **Data Preprocessing**: Handles raw molecular and protein data, cleaning, and feature extraction.
+- **Data Preprocessing**: Handles raw molecular and protein data, data cleaning, and feature extraction.
 - **Contrastive Learning**: Learns joint embeddings of molecular and protein features to capture structural and functional relationships.
 - **Diffusion Models**: Simulates the generation of optimized peptide candidates through a diffusion-based generative model.
 - **Reinforcement Learning**: Optimizes generated candidates with a policy-gradient-based approach, guided by a reward predictor for peptide properties.
