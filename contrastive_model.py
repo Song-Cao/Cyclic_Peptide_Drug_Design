@@ -93,8 +93,9 @@ def train_contrastive_model(dataloader, input_dim, latent_dim, epochs=20, learni
     protein_encoder.train()
     molecular_encoder.train()
 
+
     for epoch in range(epochs):
-        epoch_loss = 0
+        epoch_loss = 0.0
         for protein_batch, molecular_batch in dataloader:
             optimizer.zero_grad()
             z_protein = protein_encoder(protein_batch)
@@ -102,9 +103,14 @@ def train_contrastive_model(dataloader, input_dim, latent_dim, epochs=20, learni
             loss = criterion(z_protein, z_molecular)
             loss.backward()
             optimizer.step()
+    
             epoch_loss += loss.item()
+    
         scheduler.step()
-        print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss / len(dataloader):.4f}")
+        avg_loss = epoch_loss / len(dataloader)
+        print(f"Epoch {epoch + 1}/{epochs}, Loss: {avg_loss:.4f}")
+
+    
 
     return protein_encoder, molecular_encoder
 
