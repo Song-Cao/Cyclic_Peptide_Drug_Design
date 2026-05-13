@@ -28,7 +28,7 @@ class PeptideDataset(Dataset):
             torch.tensor(self.molecular_features[idx], dtype=torch.float32),
         )
 
-# Hierarchical molecular encoder
+# Define hierarchical molecular encoder
 class MolecularEncoder(nn.Module):
     def __init__(self, input_dim, latent_dim):
         super(MolecularEncoder, self).__init__()
@@ -44,7 +44,7 @@ class MolecularEncoder(nn.Module):
         x = F.normalize(self.fc3(x), p=2, dim=1)
         return x
 
-# Hierarchical protein encoder
+# Define hierarchical protein encoder 
 class ProteinEncoder(nn.Module):
     def __init__(self, input_dim, latent_dim):
         super(ProteinEncoder, self).__init__()
