@@ -109,11 +109,11 @@ def train_contrastive_model(dataloader, input_dim, latent_dim, epochs=20, learni
     return protein_encoder, molecular_encoder
 
 def main():
-    # File paths for protein and molecular features
+    # Define file paths for protein and molecular features
     protein_file = "protein_features.csv"
     molecular_file = "molecular_features.csv"
 
-    # Load dataset and dataloader
+    # Load datasets and dataloader
     dataset = PeptideDataset(protein_file, molecular_file)
     dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
